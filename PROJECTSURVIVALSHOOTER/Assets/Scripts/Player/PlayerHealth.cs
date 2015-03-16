@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // We use UI things here
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
-    public int currentHealth;
-    public Slider healthSlider;
-    public Image damageImage;
-    public AudioClip deathClip;
-    public float flashSpeed = 5f;
+    public int startingHealth = 100; //The iinitial health
+    public int currentHealth; ///The health at the current moment
+    public Slider healthSlider; // The reference to the UI slider ( health display )
+    public Image damageImage; // The red image we have in UI
+    public AudioClip deathClip; // One shot, we play it once
+    public float flashSpeed = 5f; // The length of the flash, for damage
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
 
 
     Animator anim;
     AudioSource playerAudio;
-    PlayerMovement playerMovement;
+    PlayerMovement playerMovement; // We make a referennce to a script. We disable it after death
     //PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
-        playerMovement = GetComponent <PlayerMovement> ();
+        playerMovement = GetComponent <PlayerMovement> (); 
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
@@ -45,7 +45,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (int amount) //Other scripts call this function. 
+                                        //It must be pubblic since it's callled from another script.
     {
         damaged = true;
 

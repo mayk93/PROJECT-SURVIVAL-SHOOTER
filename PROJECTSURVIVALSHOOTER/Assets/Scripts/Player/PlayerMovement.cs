@@ -48,7 +48,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Animating(float h, float v)
     {
+        //print(h);
+        //print(v);
+        //print((h != 0f) || (v != 0f));
         bool walking = ((h != 0f) || (v != 0f));
+        //bool walking = true;
         anim.SetBool("IsWalking", walking);
     }
 }
