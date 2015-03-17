@@ -20,7 +20,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Awake ()
     {
-        shootableMask = LayerMask.GetMask ("Shootable");
+        shootableMask = LayerMask.GetMask ("Shootable"); //Numarul layerului "Shotable"
         gunParticles = GetComponent<ParticleSystem> ();
         gunLine = GetComponent <LineRenderer> ();
         gunAudio = GetComponent<AudioSource> ();

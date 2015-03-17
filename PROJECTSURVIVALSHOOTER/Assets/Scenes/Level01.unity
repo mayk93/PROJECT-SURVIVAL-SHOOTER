@@ -454,6 +454,22 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: .800000012, z: 0}
+--- !u!114 &132045301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 132045295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!114 &132045302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +698,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1001 &895075571
 Prefab:
   m_ObjectHideFlags: 0
@@ -722,31 +738,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11431822, guid: ccbe5e68d5582dd43b2a7ae4993c29b8, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 265779755}
+    - target: {fileID: 11431822, guid: ccbe5e68d5582dd43b2a7ae4993c29b8, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1864507688}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccbe5e68d5582dd43b2a7ae4993c29b8, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &895075572
-GameObject:
-  m_PrefabParentObject: {fileID: 162716, guid: ccbe5e68d5582dd43b2a7ae4993c29b8, type: 2}
-  m_PrefabInternal: {fileID: 895075571}
---- !u!114 &895075573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 895075572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 265779755}
-  damageImage: {fileID: 1864507688}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!4 &895075577
 Transform:
   m_PrefabParentObject: {fileID: 448274, guid: ccbe5e68d5582dd43b2a7ae4993c29b8, type: 2}
